@@ -1,0 +1,35 @@
+{
+    "name": "cuephp/routing",
+    "type": "library",
+    "description": "cueBlog Routing Component",
+    "keywords": ["routing", "router", "URL", "URI"],
+    "license": "MIT",
+    "version": "0.1.0",
+    "require": {
+        "php": "^7.1 || ^8.0",
+        "symfony/yaml": "^4.3"
+    },
+    "autoload": {
+        "psr-4": { 
+            "CuePhp\\Routing\\": "src/" 
+        }
+    },
+    "autoload-dev": {
+        "psr-4": { 
+            "CuePhp\\Routing\\Test\\": "tests/" 
+        }
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "*",
+        "phpstan/phpstan": "^1.2",
+        "phpunit/phpunit": "^9.5" 
+    },
+    "scripts": {
+        "fix":  [
+            "./vendor/bin/phpcbf --standard=PSR2 src"
+        ],
+        "analyse": [
+            "./vendor/bin/phpstan analyse src"
+        ]
+    }
+}
